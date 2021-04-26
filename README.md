@@ -42,7 +42,7 @@ To use this package, simply do the following:
 
     If you do have a password column in your CSV file to pass password values, include the passwordHashSalt key-value pair and pass the password salt you'll like to use to hash the passwords in your file before inserting to db. 
     
-    #####***Note:*** 
+    ##### ***Note:*** 
     Do not pass an empty value to passwordHashSalt; if you don't have a password hashing salt, please omit the passwordHashSalt key-value pair entirely or pass 'null' as the value.
 
 7. Pass the fileToRead and dbSettings variables as arguments to the readCSVFile function
