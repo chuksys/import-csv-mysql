@@ -46,12 +46,12 @@ To use this package, simply do the following:
         tableFields: ['pass', 'mysql', 'table', 'fieldnames', 'that', 'match', 'with', 'csv', 'column', 'titles']
     }
     ```
-    If you don't have a password column in your CSV file to pass password values to dbTable, ignore the ***passwordHashSalt*** key-value pair.
+    If you don't have a password column in your CSV file to pass password values to dbTable, ignore the `passwordHashSalt` key-value pair.
 
-    If you do have a password column in your CSV file to pass password values, include the ***passwordHashSalt*** key-value pair and pass the password salt you'll like to use to hash the passwords in your file before inserting into db. 
+    If you do have a password column in your CSV file to pass password values, include the `passwordHashSalt` key-value pair and pass the password salt you'll like to use to hash the passwords in your file before inserting into db. 
     
     #### **Note:**
-    Do not pass an empty value to ***passwordHashSalt***; if you don't have a password hashing salt, please omit the ***passwordHashSalt*** key-value pair entirely or pass `null` as the value.
+    Do not pass an empty value to `passwordHashSalt`; if you don't have a password hashing salt, please omit the `passwordHashSalt` key-value pair entirely or pass `null` as the value.
 
     The value of ***tableFields*** must be an array of strings e.g. 
     
@@ -61,11 +61,13 @@ To use this package, simply do the following:
     ```
 
 
-7. Pass the fileToRead and dbSettings variables as arguments to the readCSVFile function
+7. Pass the `fileToRead` and `dbSettings` variables as arguments to the `readCSVFile` function
 
     ```
     readCSVFile(fileToRead, dbSettings) 
     ```
 
 
-8. If you followed these instructions, the records in your CSV file should now be imported to the mysql dbTable provided in ***dbSettings***.    
+8. Run your code.
+
+9. If you followed these instructions, the records in your CSV file should now be imported into the mysql dbTable provided in `dbSettings`.    
