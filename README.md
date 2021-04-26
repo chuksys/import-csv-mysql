@@ -13,10 +13,10 @@ To use this package, simply do the following:
     const { readCSVFile } = require('import-csv-mysql')
     ```
 
-5. Get the path of your CSV file. You can use the 'path' package to achieve this easily.
+5. Get the path of your CSV file. You can use the `path` package to achieve this easily.
     ```
     npm i path
-
+    -------------------
     const path = require('path')
 
     const root = path.parse(process.cwd()).root
@@ -36,7 +36,13 @@ To use this package, simply do the following:
         tableFields: [xxx-enter-mysql-table-fieldnames-that-match-with-csv-column-names-xxx]
     }
     ```
-7. Pass the fileToRead and dbSettings variables to the readCSVFile function
+    If you don't have a password column in your CSV file to pass password values to dbTable, ignore the passwordHashSalt key-value pair.
+
+    If you do have a password column in your CSV file to pass password values, include the passwordHashSalt key-value pair and pass the password salt you'll like to use to hash the passwords in your file before inserting to db. 
+    
+    ***Note*** Do not pass an empty value to passwordHashSalt; if you don't have a password hashing salt, please omit the passwordHashSalt key-value pair entirely or pass 'null' as the value.
+
+7. Pass the fileToRead and dbSettings variables as arguments to the readCSVFile function
 
     ```
     readCSVFile(fileToRead, dbSettings) 
