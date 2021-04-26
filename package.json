@@ -20,5 +20,14 @@
     "mysql",
     "csv-mysql",
     "import-csv-mysql"
-  ]
+  ],
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chuksys/import-csv-mysql.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chuksys/import-csv-mysql/issues"
+  },
+  "homepage": "https://github.com/chuksys/import-csv-mysql#readme"
 }
