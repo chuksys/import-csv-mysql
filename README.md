@@ -1,4 +1,4 @@
-#### Import a CSV file into a MYSQL table with ease.
+# Import a CSV file into a MYSQL table with ease.
 
 To use this package, simply do the following:
 
