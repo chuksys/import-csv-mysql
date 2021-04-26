@@ -48,7 +48,7 @@ To use this package, simply do the following:
     ```
     If you don't have a password column in your CSV file to pass password values to dbTable, ignore the `passwordHashSalt` key-value pair.
 
-    If you do have a password column in your CSV file to pass password values, include the `passwordHashSalt` key-value pair and pass the password salt you'll like to use to hash the passwords in your file before inserting into db. 
+    If you do have a password column in your CSV file to pass password values, include the `passwordHashSalt` key-value pair and pass the password salt which you'll like to use to hash the passwords in your file, before inserting into db. 
     
     #### **Note:**
     Do not pass an empty value to `passwordHashSalt`; if you don't have a password hashing salt, please omit the `passwordHashSalt` key-value pair entirely or pass `null` as the value.
