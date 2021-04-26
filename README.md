@@ -43,7 +43,7 @@ To use this package, simply do the following:
         dbName: 'xxx',
         tableName: 'xxx',
         passwordHashSalt: 'xxx',	
-        tableFields: [xxx-enter-mysql-table-fieldnames-that-match-with-csv-column-names-xxx]
+        tableFields: ['pass', 'mysql', 'table', 'fieldnames', 'that', 'match', 'with', 'csv', 'column', 'titles']
     }
     ```
     If you don't have a password column in your CSV file to pass password values to dbTable, ignore the ***passwordHashSalt*** key-value pair.
