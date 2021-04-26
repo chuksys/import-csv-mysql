@@ -2,7 +2,7 @@
 
 To use this package, simply do the following:
 
-1. Make sure the first row of your CSV contains the column titles for your file.
+1. Make sure the first row of your CSV file contains the column titles for your file.
 
 
 2. Make sure these column titles in your CSV file match the field names of your MYSQL db table.
