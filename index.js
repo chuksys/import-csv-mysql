@@ -40,8 +40,8 @@ const postToDB = (results, dbSettings) => {
 
         console.log("Connected to MySQL DB")
 
-        const sql = `INSERT INTO ${dbSettings.tableName}(${dbSettings.tableFields.toString()}) VALUES ?`;
         const values = []
+        const fieldNameValuePairs = [];
 
         results.forEach(result => {
 
@@ -50,14 +50,22 @@ const postToDB = (results, dbSettings) => {
             const value = [];
 
             for(const fieldName of dbSettings.tableFields) {
-                if (fieldName !== 'password')
+
+                if (fieldName !== 'password') {
                     value.push(result[fieldName])
-                else
-                    value.push(encryptPassword(result[fieldName]))    
+                } else {
+                    const encryptedPassword = encryptPassword(result['password'])
+                    value.push(encryptedPassword)
+                } 
+
+                fieldNameValuePairs.push(`${fieldName}=VALUES(${fieldName})`)
+                
             }
 
             values.push(value)
         })
+
+        const sql = `INSERT INTO ${dbSettings.tableName}(${dbSettings.tableFields.toString()}) VALUES ? ON DUPLICATE KEY UPDATE ${fieldNameValuePairs.toString()}`;
     
         con.query(sql, [values], (err, result) => {
             if (err) throw err;
