@@ -1,6 +1,6 @@
 {
   "name": "import-csv-mysql",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This package makes it really easy to import a CSV file into a mysql db table.",
   "main": "index.js",
   "scripts": {
