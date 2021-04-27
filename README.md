@@ -20,11 +20,7 @@ To use this package, simply do the following:
     ```
 
 
-5. Get the path of your CSV file. You can use the `path` package to achieve this easily.
-    ```
-    npm i path
-    ```
-
+5. Get the path of your CSV file. You can use the `path` node core module to achieve this easily.
     ```
     const path = require('path')
 
